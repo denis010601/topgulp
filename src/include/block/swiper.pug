@@ -1,0 +1,6 @@
+include btn
+mixin slider(img, title="Заголовок", button="текст")
+    .swiper-slide(style="background-image: url(img/slider/"+img+")")
+        .swiper__box
+            h1.title.title-h1=title
+            +btn(button)(class="btn--primary hero__btn")

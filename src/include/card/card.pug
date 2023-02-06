@@ -1,0 +1,20 @@
+mixin card(title, text, src, href)
+    if href
+        a.card(href=href)
+            if src
+                img(src=src)
+                h3.title.title-h3= title
+                p.desp.card__desp= text
+            else
+                h3.title.title-h3= title
+                p.desp.card__desp= text
+    else
+        .card
+            if src
+                img(src=src)
+                h3.title.title-h3= title
+                p.desp.card__desp= text
+            else
+                h3.title.title-h3= title
+                p.desp.card__desp= text
+    

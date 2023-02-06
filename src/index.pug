@@ -1,0 +1,25 @@
+-
+    var a = "ads";
+    var srcP= "img/people/men/"
+include news.pug
+include include/card/card.pug
+include include/layout/footer.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="css/main.css")
+    body
+        h1 Миксины
+        each item, items in news
+            .flex
+                each i in item
+                    if i.role === "админ"
+                        span Роль #{i.role}                        
+                        +card(i.name, i.age, i.photo, i.href)
+                    else
+                        span Пользователь
+                        +card(i.name, i.age, i.photo, i.href)

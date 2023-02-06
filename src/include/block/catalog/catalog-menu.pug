@@ -1,0 +1,9 @@
+mixin catalog-menu
+    h2.title.title-h2 Каталог товаров
+        ul.catalog__category
+        include arr
+            each key in catalogs
+                li.catalog__category-item= key.category
+                    ul.catalog__subcategory
+                        each item in  catalogs.subcategory
+                            li.catalog__subcategory-item= item.name
